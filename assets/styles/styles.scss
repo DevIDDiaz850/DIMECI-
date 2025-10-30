@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    /* background-color: black; */
+}
+
+/* Navbar styles Start */
+.navbar {
+    position: absolute !important;
+    z-index: 999;
+    width: 100%;
+}
+
+/* .navbar-dark .navbar-toggler-icon {
+    background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath fill="white" d="M16 18v2H5v-2h11Zm5-7v2H3v-2h18Zm-2-7v2H8V4h11Z"%2F%3E%3C%2Fsvg%3E');
+} */
+
+.navbar-dark .navbar-toggler {
+    color: transparent !important;
+    border-color: transparent !important;
+}
+
+.bg-navbar {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.navbar-brand .site-logo {
+    max-width: 130px;
+    width: 100%;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    font-weight: 600;
+}
+/* Navbar styles End */
+
+/* Hero-Banner styles Start */
+.hero-banner {
+    position: absolute;
+    z-index: 10;
+}
+
+.img-hero {
+    width: 100%;
+}
+
+.contain-title > h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.contain-description > p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+/* Hero-Banner styles End */
+
+/* Banner green Start */
+.middle-banner {
+    height: 90px;
+    color: white;
+    background-color: #4CAF50;
+    h2 {
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 1px;
+        font-weight: 300;
+        font-size: 2.5rem;
+    }
+}
+/* Banner green End */
+
+
+
+/* MEDIA QUERIES MOBILE */
+@media only screen and (max-width: 768px) {
+    .bg-navbar {
+        background-color: rgb(43, 43, 43, 0.9);
+        box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        font-size: 2rem;
+    }
+    .contain-title>h1 {
+            font-size: 2rem;
+        }
+    
+        .contain-description>p {
+            font-size: 1.1rem;
+        }
+    .img-hero {
+        width: 200%;
+    }
+    .middle-banner {
+        h2 {
+            font-size: 2rem;
+        }
+    }
+}
+/* styles acordion */
+
+.container-accordion {
+    max-width: 5020px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+}
+.single {
+    padding: 0 4rem;
+    display: grid;
+    place-content: center;
+    flex: 1;
+    /* width: 1200px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    transition: 300ms ease-in-out flex;
+}
+.single::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transition: 500ms ease-in-out background-color;
+}
+
+
+
+.single:nth-child(1) {
+    background-image: url("../images/orange.png");
+}
+.single:nth-child(2) {
+    background-image: url("/assets/images/mandarina.png");
+}
+.single:nth-child(3) {
+    background-image: url(/assets/images/toronja.png);
+}
+.single:nth-child(4) {
+    background-image: url(/assets/images/lemon.png);
+}
+
+
+.content {
+    transition: 500ms ease-in-out transform;
+}
+
+.content h3 {
+    display: none;
+    text-align: center;
+    color: #f0f8ff;
+    margin-bottom: 1rem;
+    transform: scale(1);
+    transition: 500ms ease-in-out transform;
+}
+.content h4{
+    font-size:xx-large;
+    color: #f0f8ff;
+    padding: 0;
+    border-radius: .5rem;
+    border: none;
+    transition: 500ms ease-in-out height,
+                500ms ease-in-out padding;
+}
+
+.p-content_single p {
+    display: none;
+    color: white;
+}
+
+.single:hover {
+    /* width: 1700px; */
+    flex: 4;
+    .p-content_single p {
+            display: block;
+            color: white;
+    }
+}
+.single:hover::before {
+    background-color: rgba(0, 0, 0, .3);
+}
+.single:hover .content {
+    transform: rotate(0);
+}
+
+.single:hover h4 {
+    height: 20%;
+    padding: 4px;
+}
+
+.single:hover h3 {
+    display: block;
+    text-align: left;
+    transform: scale(1);
+}
+
+.single:hover img {
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+
+   .sec-accordio{
+    display: none;
+    }
+
+}
+
+
+
+
+/*CALIDAD PREMIUM STYLES*/
+#premium{
+    background-image: url(/assets/images/bg-premium.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    position: relative;
+    .premium-title{
+        font-size: 3rem;
+        font-weight: 400;
+    }
+    .txt-subtitle h3{
+        color: #F57F17;
+        font-size: 3rem;
+        font-weight: 800;
+    }
+    .certificate{
+        .iconos{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            .icon-item, .icon-dif{
+                display: inline-block; 
+                align-items: center;
+                justify-content: center;
+                a:hover{
+                    // filter: blur(2px);
+                    filter: invert(51%) sepia(97%) saturate(1677%) hue-rotate(353deg) brightness(102%) contrast(92%);
+                }
+            }
+        }
+    }
+    .certificate .icon-img,
+    .certificate .icon-dif{
+        filter: invert(12%) sepia(4%) saturate(16%) hue-rotate(140deg) brightness(98%) contrast(10%);
+        // filter: invert(0%) sepia(6%) saturate(7%) hue-rotate(322deg) brightness(94%) contrast(100%);
+        // filter: invert(0%) sepia(18%) saturate(0%) hue-rotate(29deg) brightness(98%) contrast(103%);
+        width: 200px;
+        height: auto;
+    }
+}
+
+/* Maps and Contact Styles Start */
+
+.maps-title {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.content-map {
+    position: relative;
+    z-index: 1;
+}
+
+.img-map {
+    max-width: 900px;
+    width: 100%;
+}
+
+.btn-contact {
+    position: absolute;
+    z-index: 11;
+}
+
+.btn-custom_border {
+    border: 3px solid #417505;
+    background-color: transparent;
+    border-radius: 50px;
+    padding: .2rem;
+}
+
+.btn-text {
+    padding: auto 2rem;
+}
+
+.btn-custom_center {
+    background-color: #417505;
+    border: none;
+    border-radius: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .maps-title {
+        font-size: 2rem;
+    }
+    #premium {
+        .premium-title{
+            font-size: 2rem;
+         }
+         .txt-subtitle h3{
+            font-size: 2rem;
+        }
+        .certificate .icon-img 
+        {
+            width: 180px;
+        }
+        .certificate .icon-dif {
+            width: 250px;
+        }
+    }
+}
+
+/*CARRUSEL RESPONSIVE*/
+.carousel-responsive{
+
+    display:  none;
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    
+   .carousel-responsive {
+    display:initial;
+    .carrusel-items::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: linear-gradient(to bottom,transparent 20%, rgba(0,0,0,0.5)50%, rgba(0,0,0)95%);
+
+         }
+         .carrusel-by{
+            .title-one{
+                font-size:1.7rem;
+            }
+            .parrafo{
+            font-size: 0.7rem;
+            }
+         }
+
+    }
+
+}
+
+/* Maps and Contact Styles End */
+
+/* Footer Styles Start */
+
+.bg-footer {
+    background-color: #404040;
+}
+
+.logo-site_footer {
+    max-width: 150px;
+    width: 100%;
+}
+
+.item-footer span,
+.item-footer a {
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+    .item-footer span,
+    .item-footer a {
+        text-align: center;
+    }
+}
+
+/* Footer Styles End */
